@@ -18,8 +18,8 @@ nav {
 
 .img {
     width: 100%;
-    height: 100%;
-    max-height: 50vh;
+    height: 85%;
+    max-height: 40vh;
 }
 
 p {
@@ -162,7 +162,7 @@ HIGHLIGHTS
     background: url('assets/wave.svg');
     content: "";
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 12vw;
     left: 0;
     z-index: 1;
@@ -170,12 +170,12 @@ HIGHLIGHTS
     background-repeat: no-repeat;
 }
 
-#hightlights:before {
+#highlights:before {
     transform: translateY(-100%);
     top: 1px;
 }
 
-#hightlights:after {
+#highlights:after {
     transform: translateY(100%) rotate(180deg);
     bottom: 1px;
 }
@@ -224,10 +224,57 @@ FEATURES
 */
 
 #features {
+    padding-top: 8vw;
     background-color: rgba(115, 66, 214, 0.1);
 }
 
+.books {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.book {
+   width: 25%;
+   padding: 24px;
+}
+
+.book__img {
+    max-height: 300px;
+    transition: all 300ms ease;
+    cursor: not-allowed;
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+}
+
+.book:hover .book__img {
+    transform: scale(1.03);
+}
+
+.book__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings {
+    margin-bottom: 8px;
+    color: #fabf2a;
+}
+
+.book__price--normal {
+    text-decoration: line-through;
+    padding-right: 6px;
+    color: gray;
+}
 
 
 
